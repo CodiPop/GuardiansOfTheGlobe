@@ -17,9 +17,9 @@ namespace GuardiansOfTheGlobeApi.DBContext
         {
         }
 
-        public virtual DbSet<Agendum> Agenda { get; set; } = null!;
+        public virtual DbSet<Agenda> Agenda { get; set; } = null!;
         public virtual DbSet<Hero> Heroes { get; set; } = null!;
-        public virtual DbSet<Patrocinadore> Patrocinadores { get; set; } = null!;
+        public virtual DbSet<Patrocinador> Patrocinadores { get; set; } = null!;
         public virtual DbSet<Pelea> Peleas { get; set; } = null!;
         public virtual DbSet<Villano> Villanos { get; set; } = null!;
 
@@ -34,7 +34,7 @@ namespace GuardiansOfTheGlobeApi.DBContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Agendum>(entity =>
+            modelBuilder.Entity<Agenda>(entity =>
             {
                 entity.HasOne(d => d.IdHeroeNavigation)
                     .WithMany(p => p.Agenda)
@@ -43,7 +43,7 @@ namespace GuardiansOfTheGlobeApi.DBContext
                     .HasConstraintName("FK__agenda__id_heroe__3E52440B");
             });
 
-            modelBuilder.Entity<Patrocinadore>(entity =>
+            modelBuilder.Entity<Patrocinador>(entity =>
             {
                 entity.HasOne(d => d.IdHeroeNavigation)
                     .WithMany(p => p.Patrocinadores)

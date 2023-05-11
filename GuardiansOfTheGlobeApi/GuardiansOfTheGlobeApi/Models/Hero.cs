@@ -11,8 +11,8 @@ namespace GuardiansOfTheGlobeApi.Models
     {
         public Hero()
         {
-            Agenda = new HashSet<Agendum>();
-            Patrocinadores = new HashSet<Patrocinadore>();
+            Agenda = new HashSet<Agenda>();
+            Patrocinadores = new HashSet<Patrocinador>();
             Peleas = new HashSet<Pelea>();
         }
 
@@ -39,9 +39,9 @@ namespace GuardiansOfTheGlobeApi.Models
         public string? RelacionesPersonales { get; set; }
 
         [InverseProperty("IdHeroeNavigation")]
-        public virtual ICollection<Agendum> Agenda { get; set; }
+        public virtual ICollection<Agenda> Agenda { get; set; }
         [InverseProperty("IdHeroeNavigation")]
-        public virtual ICollection<Patrocinadore> Patrocinadores { get; set; }
+        public virtual ICollection<Patrocinador> Patrocinadores { get; set; }
         [InverseProperty("IdHeroeNavigation")]
         public virtual ICollection<Pelea> Peleas { get; set; }
     }

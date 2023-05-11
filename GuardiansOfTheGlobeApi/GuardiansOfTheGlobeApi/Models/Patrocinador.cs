@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace GuardiansOfTheGlobeApi.Models
 {
     [Table("patrocinadores")]
-    public partial class Patrocinadore
+    public partial class Patrocinador
     {
         [Key]
         [Column("id")]

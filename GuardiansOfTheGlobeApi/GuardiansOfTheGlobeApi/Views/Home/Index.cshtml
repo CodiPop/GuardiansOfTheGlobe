@@ -6,3 +6,38 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<div>
+    <button onclick="redirigir(1)">Ir a la tabla de Heroes</button>
+    <button onclick="redirigir(2)">Ir a la tabla de Villanos</button>
+    <button onclick="redirigir(3)">Ir a la tabla de Agenda</button>
+    <button onclick="redirigir(4)">Ir a la tabla de Peleas</button>
+    <button onclick="redirigir(5)">Ir a la tabla de Patrocinadores</button>
+    <script>
+        function redirigir(numero) {
+            switch (numero) {
+                case 1:
+                    window.location.href = "https://localhost:7030/heroes"; // Reemplaza con el enlace de la tabla de héroes
+                    break;
+                case 2:
+                    window.location.href = "https://localhost:7030/villanos"; // Reemplaza con el enlace de la tabla de villanos
+                    break;
+                case 3:
+                    window.location.href = "https://localhost:7030/agendas"; // Reemplaza con el enlace de la tabla de agenda
+                    break;
+                case 4:
+                    window.location.href = "https://localhost:7030/peleas"; // Reemplaza con el enlace de la tabla de peleas
+                    break;
+                case 5:
+                    window.location.href = "https://localhost:7030/patrocinadores"; // Reemplaza con el enlace de la tabla de patrocinadores
+                    break;
+                default:
+                    break;
+            }
+        }
+
+ 
+ 
+
+    </script>
+
+</div>

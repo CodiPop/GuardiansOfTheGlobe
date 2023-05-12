@@ -25,7 +25,11 @@ namespace GuardiansOfTheGlobeApi.Controllers
             var appDbContext = _context.Peleas.Include(p => p.IdHeroeNavigation).Include(p => p.IdVillanoNavigation);
             return View(await appDbContext.ToListAsync());
         }
-
+        [HttpGet("pelea")]
+        public async Task<ActionResult<IEnumerable<Pelea>>> GetAlumnos()
+        {
+            return await _context.Peleas.ToListAsync();
+        }
         // GET: Peleas/Details/5
         public async Task<IActionResult> Details(int? id)
         {

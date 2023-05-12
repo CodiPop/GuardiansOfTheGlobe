@@ -25,6 +25,11 @@ namespace GuardiansOfTheGlobeApi.Controllers
             var appDbContext = _context.Agenda.Include(a => a.IdHeroeNavigation);
             return View(await appDbContext.ToListAsync());
         }
+        [HttpGet("agenda")]
+        public async Task<ActionResult<IEnumerable<Agenda>>> GetAlumnos()
+        {
+            return await _context.Agenda.ToListAsync();
+        }
 
         // GET: Agendas/Details/5
         public async Task<IActionResult> Details(int? id)

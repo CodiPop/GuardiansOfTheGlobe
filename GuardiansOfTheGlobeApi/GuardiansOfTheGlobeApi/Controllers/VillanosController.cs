@@ -26,7 +26,21 @@ namespace GuardiansOfTheGlobeApi.Controllers
                           View(await _context.Villanos.ToListAsync()) :
                           Problem("Entity set 'AppDbContext.Villanos'  is null.");
         }
+        [HttpGet("villano")]
+        public async Task<ActionResult<IEnumerable<Villano>>> GetVillanos()
+        {
+            return await _context.Villanos.ToListAsync();
+        }
 
+        [HttpGet("villanos/prodalma")]
+        public async Task<IActionResult> GetVillanosMas()
+        {
+            var villanoList = await _context.Villanos
+                .FromSqlRaw("Exec ObtenerVillanoConMasPeleas")
+                .ToListAsync();
+
+            return Ok(villanoList);
+        }
         // GET: Villanos/Details/5
         public async Task<IActionResult> Details(int? id)
         {

@@ -25,7 +25,11 @@ namespace GuardiansOfTheGlobeApi.Controllers
             var appDbContext = _context.Patrocinadores.Include(p => p.IdHeroeNavigation);
             return View(await appDbContext.ToListAsync());
         }
-
+        [HttpGet("patrocinador")]
+        public async Task<ActionResult<IEnumerable<Patrocinador>>> GetAlumnos()
+        {
+            return await _context.Patrocinadores.ToListAsync();
+        }
         // GET: Patrocinadores/Details/5
         public async Task<IActionResult> Details(int? id)
         {

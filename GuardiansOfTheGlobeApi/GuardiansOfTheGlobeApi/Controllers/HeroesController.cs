@@ -27,6 +27,62 @@ namespace GuardiansOfTheGlobeApi.Controllers
                           Problem("Entity set 'AppDbContext.Heroes'  is null.");
         }
 
+        [HttpGet("heroe")]
+        public async Task<ActionResult<IEnumerable<Hero>>> GetAlumnos()
+        {
+            return await _context.Heroes.ToListAsync();
+        }
+
+
+        [HttpGet("BuscarNombre/{nombre}")]
+        public async Task<ActionResult<IEnumerable<Hero>>> GetHeroesNombre(string nombre)
+        {
+            var busqueda = await _context.Heroes.Where(p => p.Nombre.Contains(nombre)).ToListAsync();
+
+            
+            if (busqueda == null)
+            {
+                return NotFound();
+            }
+
+            return busqueda;
+        }
+        [HttpGet("BuscarRelacion/{relacion}")]
+        public async Task<ActionResult<IEnumerable<Hero>>> GetHeroesRelacion(string relacion)
+        {
+            var busqueda = await _context.Heroes.Where(p => p.RelacionesPersonales.Contains(relacion)).ToListAsync();
+
+
+            if (busqueda == null)
+            {
+                return NotFound();
+            }
+
+            return busqueda;
+        }
+        [HttpGet("BuscarHabilidad/{habilidad}")]
+        public async Task<ActionResult<IEnumerable<Hero>>> GetHeroesHabilidad(string habilidad)
+        {
+            var busqueda = await _context.Heroes.Where(p => p.Habilidades.Contains(habilidad)).ToListAsync();
+
+
+            if (busqueda == null)
+            {
+                return NotFound();
+            }
+
+            return busqueda;
+        }
+
+        [HttpGet("heroes/prodalma")]
+        public async Task<IActionResult> GetMyG()
+        {
+            var villanoList = await _context.Heroes
+                .FromSqlRaw("Exec ObtenerMyG")
+                .ToListAsync();
+
+            return Ok(villanoList);
+        }
         // GET: Heroes/Details/5
         public async Task<IActionResult> Details(int? id)
         {

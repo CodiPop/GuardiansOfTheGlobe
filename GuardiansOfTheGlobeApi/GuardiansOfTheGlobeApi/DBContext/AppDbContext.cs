@@ -8,6 +8,8 @@ namespace GuardiansOfTheGlobeApi.DBContext
 {
     public partial class AppDbContext : DbContext
     {
+        internal object VillanoPeleasResult;
+
         public AppDbContext()
         {
         }
@@ -22,6 +24,7 @@ namespace GuardiansOfTheGlobeApi.DBContext
         public virtual DbSet<Patrocinador> Patrocinadores { get; set; } = null!;
         public virtual DbSet<Pelea> Peleas { get; set; } = null!;
         public virtual DbSet<Villano> Villanos { get; set; } = null!;
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -42,7 +45,6 @@ namespace GuardiansOfTheGlobeApi.DBContext
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__agenda__id_heroe__3E52440B");
             });
-
             modelBuilder.Entity<Patrocinador>(entity =>
             {
                 entity.HasOne(d => d.IdHeroeNavigation)

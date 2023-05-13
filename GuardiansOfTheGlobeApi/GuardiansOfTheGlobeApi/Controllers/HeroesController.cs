@@ -74,14 +74,42 @@ namespace GuardiansOfTheGlobeApi.Controllers
             return busqueda;
         }
 
-        [HttpGet("heroes/prodalma")]
+        [HttpGet("heroes/MyG")]
         public async Task<IActionResult> GetMyG()
-        {
-            var villanoList = await _context.Heroes
-                .FromSqlRaw("Exec ObtenerMyG")
-                .ToListAsync();
 
-            return Ok(villanoList);
+
+        {
+            var resultado =  from pelea in _context.Peleas
+                            join heroe in _context.Heroes on pelea.IdHeroe equals heroe.Id
+                            join villano in _context.Villanos on pelea.IdVillano equals villano.Id
+                            where heroe.Nombre == "The Guardians" || heroe.Nombre == "Mark"
+                            select new
+                            {
+                                nombre_heroe = heroe.Nombre,
+                                nombre_villano = villano.Nombre,
+                                resultado = pelea.Resultado
+                            };
+
+            return Ok(resultado);
+        }
+        [HttpGet("heroes/Top3")]
+        public async Task<IActionResult> GetTop()
+
+
+        {
+            var resultado = (from pelea in _context.Peleas
+                             join heroe in _context.Heroes on pelea.IdHeroe equals heroe.Id
+                             where pelea.Resultado == "Victoria"
+                             group heroe by heroe.Nombre into g
+                             orderby g.Count() descending
+                             select new
+                             {
+                                 nombre = g.Key,
+                                 victorias = g.Count()
+                             }).Take(3);
+
+
+            return Ok(resultado);
         }
         // GET: Heroes/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -32,14 +32,40 @@ namespace GuardiansOfTheGlobeApi.Controllers
             return await _context.Villanos.ToListAsync();
         }
 
-        [HttpGet("villanos/prodalma")]
-        public async Task<IActionResult> GetVillanosMas()
+        [HttpGet("villanos/VmasPeleas/{idheroe}")]
+        public async Task<IActionResult> GetVillanosMas(int idheroe)
         {
-            var villanoList = await _context.Villanos
-                .FromSqlRaw("Exec ObtenerVillanoConMasPeleas")
-                .ToListAsync();
+            //Villanomas villanomas = await _context.Villanos.FromSqlRaw("Exec ObtenerVillanoConMasPeleas").ToListAsync();
+            //var result = _context.Villanomas.($"EXEC ObtenerVillanoConMasPeleas").FirstOrDefault();
+            // Villanomas villanomas = _context.Database.ExecuteSqlRaw("Exec ObtenerVillanoConMasPeleas");
+            //var results = _context.Database.ExecuteSqlRaw("EXEC ObtenerVillanoConMasPeleas");
+            //var results = _context.Villanos.FromSqlRaw<VillanoPeleasResult>("EXEC ObtenerVillanoConMasPeleas").FirstOrDefault();
 
-            return Ok(villanoList);
+            var peleas = _context.Peleas;
+            var villanos = _context.Villanos;
+
+            var id_heroe = idheroe; // Reemplaza [valor_id_heroe] con el valor deseado
+
+            var query = (from p in peleas
+                         join v in villanos on p.IdVillano equals v.Id
+                         where p.IdHeroe == id_heroe
+                         group v by new { v.Id, v.Nombre } into g
+                         orderby g.Count() descending
+                         select new
+                         {
+                             nombre_villano = g.Key.Nombre,
+                             cantidad_de_peleas = g.Count()
+                         }).Take(1);
+            var results = await query.FirstOrDefaultAsync();
+
+            //return Ok(result);
+
+
+            return Ok(results);
+
+
+
+           // return Ok(result);
         }
         // GET: Villanos/Details/5
         public async Task<IActionResult> Details(int? id)

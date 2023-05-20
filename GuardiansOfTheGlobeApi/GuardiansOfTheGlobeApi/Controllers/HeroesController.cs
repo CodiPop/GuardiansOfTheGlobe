@@ -135,9 +135,64 @@ namespace GuardiansOfTheGlobeApi.Controllers
             return View();
         }
 
-        // POST: Heroes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPut("ActualizarHeroe/{id}")]
+        public async Task<IActionResult> ActualizarHeroe(int id, [FromBody] Hero heroeModel)
+        {
+
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var heroeExistente = await _context.Heroes.FindAsync(id);
+
+            if (heroeExistente == null)
+            {
+                return NotFound();
+            }
+
+            // Actualizar los campos del héroe existente con los valores proporcionados
+            heroeExistente.Nombre = heroeModel.Nombre;
+            heroeExistente.Edad = heroeModel.Edad;
+            heroeExistente.Habilidades = heroeModel.Habilidades;
+            heroeExistente.Debilidades = heroeModel.Debilidades;
+            heroeExistente.RelacionesPersonales = heroeModel.RelacionesPersonales;
+
+            // Guardar los cambios en la base de datos
+            await _context.SaveChangesAsync();
+
+            return Ok("Registro actualizado exitosamente");
+        }
+
+
+        [HttpPost("CrearHeroe")]
+        public async Task<IActionResult> CrearHeroe([FromBody] Hero heroeModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Obtener los valores de los parámetros desde heroeModel
+            string nombre = heroeModel.Nombre;
+            int edad = (int)heroeModel.Edad;
+            string habilidades = heroeModel.Habilidades;
+            string debilidades = heroeModel.Debilidades;
+            string relacionesPersonales = heroeModel.RelacionesPersonales;
+
+            // Ejecutar el procedimiento almacenado
+            await _context.Database.ExecuteSqlInterpolatedAsync($@"EXEC InsertarNuevoHeroe 
+        @nombre = {nombre}, 
+        @edad = {edad},
+        @habilidades = {habilidades},
+        @debilidades = {debilidades},
+        @relaciones_personales = {relacionesPersonales}");
+
+            return Ok("Registro creado exitosamente");
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Edad,Habilidades,Debilidades,RelacionesPersonales")] Hero hero)
@@ -238,6 +293,22 @@ namespace GuardiansOfTheGlobeApi.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [HttpDelete("BorrarHeroe/{id}")]
+        public async Task<IActionResult> BorrarHeroe(int id)
+        {
+            var heroe = await _context.Heroes.FindAsync(id);
+
+            if (heroe == null)
+            {
+                return NotFound();
+            }
+
+            _context.Heroes.Remove(heroe);
+            await _context.SaveChangesAsync();
+
+            return Ok("Héroe borrado exitosamente");
+        }
+
 
         private bool HeroExists(int id)
         {

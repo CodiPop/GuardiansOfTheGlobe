@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "561bcf72-c976-4bbb-a73b-dea7f5305ab8",
+		"name": "GuardiansOfTheGlobe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23441359"
+	},
+	"item": [
+		{
+			"name": "Results",
+			"item": [
+				{
+					"name": "Heroe",
+					"item": [
+						{
+							"name": "Heroes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/heroe",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"heroe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Heroe por nombre",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/BuscarNombre/man",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"BuscarNombre",
+										"man"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Heroe por relacion",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/BuscarRelacion/Lois",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"BuscarRelacion",
+										"Lois"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Heroe por habilidad",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/BuscarHabilidad/Vuelo",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"BuscarHabilidad",
+										"Vuelo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MyG",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/heroes/MyG",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"heroes",
+										"MyG"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Top 3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/heroes/Top3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"heroes",
+										"Top3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Heroe",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Superman\",\r\n    \"edad\": 35,\r\n    \"habilidades\": \"Vuelo, Fuerza sobrehumana\",\r\n    \"debilidades\": \"Criptonita\",\r\n    \"relacionesPersonales\": \"Lois Lane\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/CrearHeroe",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"CrearHeroe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Superman manman\",\r\n    \"edad\": 35,\r\n    \"habilidades\": \"Vuelo, Fuerza sobrehumana\",\r\n    \"debilidades\": \"Criptonita\",\r\n    \"relacionesPersonales\": \"Lois Lane\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/ActualizarHeroe/18",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"ActualizarHeroe",
+										"18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/BorrarHeroe/18",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"BorrarHeroe",
+										"18"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Villano",
+					"item": [
+						{
+							"name": "Villanos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/villano",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"villano"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Villano con mas peleas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/villanos/VmasPeleas/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"villanos",
+										"VmasPeleas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Joker\",\r\n  \"edad\": 40,\r\n  \"habilidades\": \"Mente brillante, Manipulación\",\r\n  \"origen\": \"Gotham City\",\r\n  \"debilidades\": \"Su obsesión con Batman\",\r\n  \"poder\": \"Caos\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/CrearVillano",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"CrearVillano"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/BorrarVillano/7",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"BorrarVillano",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Nuevo nombre del villano\",\r\n  \"edad\": 30,\r\n  \"habilidades\": \"Nuevas habilidades\",\r\n  \"origen\": \"Nuevo origen\",\r\n  \"debilidades\": \"Nuevas debilidades\",\r\n  \"poder\": \"Nuevo poder\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/ActualizarVillano/6",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"ActualizarVillano",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Agenda",
+					"item": [
+						{
+							"name": "Agenda",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/agenda",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"agenda"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idHeroe\": 1,\r\n  \"fecha\": \"2023-05-10\",\r\n  \"evento\": \"Reunión de equipo\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/CrearEvento",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"CrearEvento"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idHeroe\": 5,\r\n  \"fecha\": \"2023-05-10\",\r\n  \"evento\": \"Reunión de equipo\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/ActualizarEvento/7",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"ActualizarEvento",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/EliminarEvento/7",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"EliminarEvento",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patrocinador",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/Lospatrocinadores",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"Lospatrocinadores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idHeroe\": 1,\r\n        \"nombre\": \"Stark Industries\",\r\n        \"monto\": 100000,\r\n        \"origenDinero\": \"Industria tecnológica\",\r\n        \"idHeroeNavigation\": null\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/CrearPatrocinador",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"CrearPatrocinador"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idHeroe\": 1,\r\n        \"nombre\": \"Stark Industries\",\r\n        \"monto\": 123456,\r\n        \"origenDinero\": \"Industria tecnológica\",\r\n        \"idHeroeNavigation\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/ActualizarPatrocinador/7",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"ActualizarPatrocinador",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/BorrarPatrocinador/7",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"BorrarPatrocinador",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Peleas",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7030/ObtenerPeleas",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"ObtenerPeleas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idheroe\": 4,\r\n  \"idvillano\": 4,\r\n  \"resultado\": \"xd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/CrearPelea",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"CrearPelea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idheroe\": 4,\r\n  \"idvillano\": 4,\r\n  \"resultado\": \"Empate\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7030/ActualizarPelea/41",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7030",
+									"path": [
+										"ActualizarPelea",
+										"41"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

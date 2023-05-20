@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 
 namespace GuardiansOfTheGlobeApi.Models
@@ -27,6 +28,7 @@ namespace GuardiansOfTheGlobeApi.Models
 
         [ForeignKey("IdHeroe")]
         [InverseProperty("Patrocinadores")]
+        
         public virtual Hero IdHeroeNavigation { get; set; } = null!;
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GuardiansOfTheGlobeApi.DBContext;
 using GuardiansOfTheGlobeApi.Models;
+using Microsoft.Data.SqlClient;
 
 namespace GuardiansOfTheGlobeApi.Controllers
 {
@@ -163,6 +164,74 @@ namespace GuardiansOfTheGlobeApi.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+
+
+        [HttpGet("LosPatrocinadores")]
+        public async Task<IActionResult> ObtenerPatrocinadores()
+        {
+            var patrocinadores = await _context.Patrocinadores.ToListAsync();
+
+            return Ok(patrocinadores);
+        }
+
+        [HttpPost("CrearPatrocinador")]
+        public async Task<IActionResult> CrearPatrocinador([FromBody] Patrocinador patrocinadorModel)
+        {
+ 
+
+            string sql = $"EXEC InsertarNuevoPatrocinador " +
+                         $"@id_heroe = {patrocinadorModel.IdHeroe}, " +
+                         $"@nombre = '{patrocinadorModel.Nombre}', " +
+                         $"@monto = {patrocinadorModel.Monto}, " +
+                         $"@origen_dinero = '{patrocinadorModel.OrigenDinero}'";
+
+            await _context.Database.ExecuteSqlRawAsync(sql);
+
+            return Ok("Patrocinador creado exitosamente");
+        }
+
+
+
+        [HttpDelete("BorrarPatrocinador/{id}")]
+        public async Task<IActionResult> BorrarPatrocinador(int id)
+        {
+            var patrocinador = await _context.Patrocinadores.FindAsync(id);
+
+            if (patrocinador == null)
+            {
+                return NotFound();
+            }
+
+            _context.Patrocinadores.Remove(patrocinador);
+            await _context.SaveChangesAsync();
+
+            return Ok("Patrocinador borrado exitosamente");
+        }
+
+        [HttpPut("ActualizarPatrocinador/{id}")]
+        public async Task<IActionResult> ActualizarPatrocinador(int id, [FromBody] Patrocinador patrocinadorModel)
+        {
+
+
+            var patrocinador = await _context.Patrocinadores.FindAsync(id);
+
+            if (patrocinador == null)
+            {
+                return NotFound();
+            }
+
+            patrocinador.Nombre = patrocinadorModel.Nombre;
+            patrocinador.Monto = patrocinadorModel.Monto;
+            patrocinador.OrigenDinero = patrocinadorModel.OrigenDinero;
+
+            _context.Patrocinadores.Update(patrocinador);
+            await _context.SaveChangesAsync();
+
+            return Ok("Patrocinador actualizado exitosamente");
+        }
+
+
 
         private bool PatrocinadorExists(int id)
         {

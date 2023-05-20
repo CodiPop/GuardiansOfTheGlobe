@@ -165,6 +165,58 @@ namespace GuardiansOfTheGlobeApi.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+
+        [HttpPost("CrearEvento")]
+        public async Task<IActionResult> CrearEvento([FromBody] Agenda eventoModel)
+        {
+ 
+
+            var query = $"EXEC InsertarNuevoEventoEnAgenda @id_heroe = {eventoModel.IdHeroe}, @fecha = '{eventoModel.Fecha}', @evento = '{eventoModel.Evento}'";
+
+            await _context.Database.ExecuteSqlRawAsync(query);
+
+            return Ok("Evento creado exitosamente");
+        }
+
+
+        [HttpPut("ActualizarEvento/{id}")]
+        public async Task<IActionResult> ActualizarEvento(int id, [FromBody] Agenda eventoModel)
+        {
+          
+
+            var evento = await _context.Agenda.FindAsync(id);
+
+            if (evento == null)
+            {
+                return NotFound();
+            }
+
+            evento.IdHeroe = eventoModel.IdHeroe;
+            evento.Fecha = eventoModel.Fecha;
+            evento.Evento = eventoModel.Evento;
+
+            _context.Agenda.Update(evento);
+            await _context.SaveChangesAsync();
+
+            return Ok("Evento actualizado exitosamente");
+        }
+
+        [HttpDelete("EliminarEvento/{id}")]
+        public async Task<IActionResult> EliminarEvento(int id)
+        {
+            var evento = await _context.Agenda.FindAsync(id);
+
+            if (evento == null)
+            {
+                return NotFound();
+            }
+
+            _context.Agenda.Remove(evento);
+            await _context.SaveChangesAsync();
+
+            return Ok("Evento eliminado exitosamente");
+        }
         private bool AgendaExists(int id)
         {
           return (_context.Agenda?.Any(e => e.Id == id)).GetValueOrDefault();

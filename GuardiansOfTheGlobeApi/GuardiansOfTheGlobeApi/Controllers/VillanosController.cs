@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GuardiansOfTheGlobeApi.DBContext;
 using GuardiansOfTheGlobeApi.Models;
+using Microsoft.Data.SqlClient;
 
 namespace GuardiansOfTheGlobeApi.Controllers
 {
@@ -94,6 +95,29 @@ namespace GuardiansOfTheGlobeApi.Controllers
         // POST: Villanos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+        [HttpPost("CrearVillano")]
+        public async Task<IActionResult> CrearVillano([FromBody] Villano villanoModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var parameters = new[]
+            {
+        new SqlParameter("@nombre", villanoModel.Nombre),
+        new SqlParameter("@edad", villanoModel.Edad),
+        new SqlParameter("@habilidades", villanoModel.Habilidades),
+        new SqlParameter("@origen", villanoModel.Origen),
+        new SqlParameter("@debilidades", villanoModel.Debilidades),
+        new SqlParameter("@poder", villanoModel.Poder)
+    };
+
+            await _context.Database.ExecuteSqlRawAsync("EXEC InsertarNuevoVillano @nombre, @edad, @habilidades, @origen, @debilidades, @poder", parameters);
+
+            return Ok("Registro creado exitosamente");
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Edad,Habilidades,Origen,Poder,Debilidades")] Villano villano)
@@ -122,6 +146,37 @@ namespace GuardiansOfTheGlobeApi.Controllers
             }
             return View(villano);
         }
+        [HttpPut("ActualizarVillano/{id}")]
+        public async Task<IActionResult> ActualizarVillano(int id, [FromBody] Villano villanoModel)
+        {
+
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var villanoExistente = await _context.Villanos.FindAsync(id);
+
+            if (villanoExistente == null)
+            {
+                return NotFound();
+            }
+
+            // Actualizar los campos del villano existente con los valores proporcionados
+            villanoExistente.Nombre = villanoModel.Nombre;
+            villanoExistente.Edad = villanoModel.Edad;
+            villanoExistente.Habilidades = villanoModel.Habilidades;
+            villanoExistente.Origen = villanoModel.Origen;
+            villanoExistente.Debilidades = villanoModel.Debilidades;
+            villanoExistente.Poder = villanoModel.Poder;
+
+            // Guardar los cambios en la base de datos
+            await _context.SaveChangesAsync();
+
+            return Ok("Villano actualizado exitosamente");
+        }
+
 
         // POST: Villanos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -174,6 +229,22 @@ namespace GuardiansOfTheGlobeApi.Controllers
             }
 
             return View(villano);
+        }
+
+        [HttpDelete("BorrarVillano/{id}")]
+        public async Task<IActionResult> BorrarVillano(int id)
+        {
+            var villano = await _context.Villanos.FindAsync(id);
+
+            if (villano == null)
+            {
+                return NotFound();
+            }
+
+            _context.Villanos.Remove(villano);
+            await _context.SaveChangesAsync();
+
+            return Ok("Villano borrado exitosamente");
         }
 
         // POST: Villanos/Delete/5

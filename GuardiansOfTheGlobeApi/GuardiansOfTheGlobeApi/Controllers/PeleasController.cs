@@ -170,6 +170,63 @@ namespace GuardiansOfTheGlobeApi.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet("ObtenerPeleas")]
+        public async Task<IActionResult> ObtenerPeleas()
+        {
+            var peleas = await _context.Peleas.ToListAsync();
+
+            return Ok(peleas);
+        }
+
+
+        [HttpPost("CrearPelea")]
+        public async Task<IActionResult> CrearPelea([FromBody] Pelea peleaModel)
+        {
+            var query = $"EXEC InsertarNuevaPelea @id_heroe = {peleaModel.IdHeroe}, @id_villano = {peleaModel.IdVillano}, @resultado = '{peleaModel.Resultado}'";
+
+            await _context.Database.ExecuteSqlRawAsync(query);
+
+            return Ok("Pelea creada exitosamente");
+        }
+
+
+        [HttpPut("ActualizarPelea/{id}")]
+        public async Task<IActionResult> ActualizarPelea(int id, [FromBody] Pelea peleaModel)
+        {
+            var pelea = await _context.Peleas.FindAsync(id);
+
+            if (pelea == null)
+            {
+                return NotFound();
+            }
+
+            pelea.IdHeroe = peleaModel.IdHeroe;
+            pelea.IdVillano = peleaModel.IdVillano;
+            pelea.Resultado = peleaModel.Resultado;
+
+            _context.Peleas.Update(pelea);
+            await _context.SaveChangesAsync();
+
+            return Ok("Pelea actualizada exitosamente");
+        }
+
+        [HttpDelete("EliminarPelea/{id}")]
+        public async Task<IActionResult> EliminarPelea(int id)
+        {
+            var pelea = await _context.Peleas.FindAsync(id);
+
+            if (pelea == null)
+            {
+                return NotFound();
+            }
+
+            _context.Peleas.Remove(pelea);
+            await _context.SaveChangesAsync();
+
+            return Ok("Pelea eliminada exitosamente");
+        }
+
+
         private bool PeleaExists(int id)
         {
           return (_context.Peleas?.Any(e => e.Id == id)).GetValueOrDefault();

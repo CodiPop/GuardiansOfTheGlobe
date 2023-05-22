@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("5c80e984-2f36-4c7e-a78e-0f75efb7ac86")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("GuardiansOfTheGlobeApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

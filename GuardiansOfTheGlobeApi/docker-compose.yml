@@ -1,30 +1,22 @@
 version: '3.4'
-
-networks:
-  guardiansoftheglobedb:
-  guardiansoftheglobeapi:
-
 services:
-   
-  guardiansoftheglobedb:
-    container_name: GOTGdb
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    ports:
-        - 8002:1433
+  db:
+    image: "mcr.microsoft.com/mssql/server"
     environment:
-        - ACCEPT_EULA=Y
-        
-  guardiansoftheglobeapi:
-    container_name: GOTGapi
-    image: ${DOCKER_REGISTRY-}guardiansoftheglobeapi
-    build:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - dbdata:/var/opt/mssql
+  web:
+    build: 
       context: .
-      dockerfile: GuardiansOfTheGlobeApi/Dockerfile
+      dockerfile: Dockerfile
     ports:
-        - 8001:80
+      - "8000:80"
     depends_on:
-        - guardiansoftheglobedb
-    environment:
-        - DB_HOST=guardiansoftheglobedb
-        - DB_NAME=GuardiansOfTheGlobe
-        
+      - db
+
+volumes:
+  dbdata:

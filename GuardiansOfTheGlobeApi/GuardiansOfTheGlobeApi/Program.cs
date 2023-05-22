@@ -8,8 +8,11 @@ builder.Services.AddControllersWithViews();
 var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
 var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 var connectionString = $"Data Source={dbHost};Initial Catalog={dbName};Integrated Security=True";
-builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("AppConnection")));
-//builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(connectionString));
+
+//builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("AppConnection")));
+Console.WriteLine(connectionString);
+Console.WriteLine("------------------------------------------------------------------------------------------");
+builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer("Server=db;Database=mydatabase;User Id=sa;Password=Your_password123;"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,6 +23,21 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+    // Asegúrate de que la base de datos esté creada y todas las migraciones estén aplicadas
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        try
+        {
+            var context = services.GetRequiredService<AppDbContext>();
+            context.Database.Migrate();
+        }
+        catch (Exception ex)
+        {
+            var logger = services.GetRequiredService<ILogger<Program>>();
+            logger.LogError(ex, "Ocurrió un error al migrar la base de datos.");
+        }
+}
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

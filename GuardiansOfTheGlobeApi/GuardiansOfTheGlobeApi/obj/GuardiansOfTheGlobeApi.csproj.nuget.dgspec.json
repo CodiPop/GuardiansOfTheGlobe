@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\santi\\OneDrive\\Documents\\GitHub\\GuardiansOfTheGlobe\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj": {}
+    "C:\\Users\\santi\\Downloads\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\santi\\OneDrive\\Documents\\GitHub\\GuardiansOfTheGlobe\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj": {
+    "C:\\Users\\santi\\Downloads\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documents\\GitHub\\GuardiansOfTheGlobe\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\Downloads\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj",
         "projectName": "GuardiansOfTheGlobeApi",
-        "projectPath": "C:\\Users\\santi\\OneDrive\\Documents\\GitHub\\GuardiansOfTheGlobe\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj",
+        "projectPath": "C:\\Users\\santi\\Downloads\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\OneDrive\\Documents\\GitHub\\GuardiansOfTheGlobe\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\obj\\",
+        "outputPath": "C:\\Users\\santi\\Downloads\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",

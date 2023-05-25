@@ -232,6 +232,22 @@ namespace GuardiansOfTheGlobeApi.Controllers
         }
 
 
+        [HttpGet("PatrocinadorConMayorMonto/{idHeroe}")]
+        public async Task<IActionResult> ObtenerPatrocinadorConMayorMonto(int idHeroe)
+        {
+            var patrocinador = await _context.Patrocinadores
+                
+                .Where(p => p.IdHeroe == idHeroe)
+                .OrderByDescending(p => p.Monto)
+                .FirstOrDefaultAsync();
+
+            if (patrocinador == null)
+            {
+                return NotFound("No se encontró un patrocinador para el héroe especificado.");
+            }
+
+            return Ok(patrocinador);
+        }
 
         private bool PatrocinadorExists(int id)
         {

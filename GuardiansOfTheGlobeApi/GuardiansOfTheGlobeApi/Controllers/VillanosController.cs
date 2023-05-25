@@ -32,20 +32,53 @@ namespace GuardiansOfTheGlobeApi.Controllers
         {
             return await _context.Villanos.ToListAsync();
         }
+        [HttpGet("BuscarNombreVillano/{nombre}")]
+        public async Task<ActionResult<IEnumerable<Villano>>> GetVillanoNombre(string nombre)
+        {
+            var busqueda = await _context.Villanos.Where(p => p.Nombre.Contains(nombre)).ToListAsync();
 
+
+            if (busqueda == null)
+            {
+                return NotFound();
+            }
+
+            return busqueda;
+        }
+        [HttpGet("BuscarOrigenVillano/{origen}")]
+        public async Task<ActionResult<IEnumerable<Villano>>> GetVillanosOrigen(string origen)
+        {
+            var busqueda = await _context.Villanos.Where(p => p.Origen.Contains(origen)).ToListAsync();
+
+
+            if (busqueda == null)
+            {
+                return NotFound();
+            }
+
+            return busqueda;
+        }
+        [HttpGet("BuscarDebilidadVillano/{debilidad}")]
+        public async Task<ActionResult<IEnumerable<Villano>>> GetVillanoDebilidad(string debilidad)
+        {
+            var busqueda = await _context.Villanos.Where(p => p.Debilidades.Contains(debilidad)).ToListAsync();
+
+
+            if (busqueda == null)
+            {
+                return NotFound();
+            }
+
+            return busqueda;
+        }
         [HttpGet("villanos/VmasPeleas/{idheroe}")]
         public async Task<IActionResult> GetVillanosMas(int idheroe)
         {
-            //Villanomas villanomas = await _context.Villanos.FromSqlRaw("Exec ObtenerVillanoConMasPeleas").ToListAsync();
-            //var result = _context.Villanomas.($"EXEC ObtenerVillanoConMasPeleas").FirstOrDefault();
-            // Villanomas villanomas = _context.Database.ExecuteSqlRaw("Exec ObtenerVillanoConMasPeleas");
-            //var results = _context.Database.ExecuteSqlRaw("EXEC ObtenerVillanoConMasPeleas");
-            //var results = _context.Villanos.FromSqlRaw<VillanoPeleasResult>("EXEC ObtenerVillanoConMasPeleas").FirstOrDefault();
-
+    
             var peleas = _context.Peleas;
             var villanos = _context.Villanos;
 
-            var id_heroe = idheroe; // Reemplaza [valor_id_heroe] con el valor deseado
+            var id_heroe = idheroe; 
 
             var query = (from p in peleas
                          join v in villanos on p.IdVillano equals v.Id
@@ -59,14 +92,14 @@ namespace GuardiansOfTheGlobeApi.Controllers
                          }).Take(1);
             var results = await query.FirstOrDefaultAsync();
 
-            //return Ok(result);
+            
 
 
             return Ok(results);
 
 
 
-           // return Ok(result);
+           
         }
         // GET: Villanos/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -265,6 +298,26 @@ namespace GuardiansOfTheGlobeApi.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+
+        [HttpGet("VillanoMasDerrotas")]
+        public IActionResult GetVillanoMasDerrotas()
+        {
+            var resultado = (from p in _context.Peleas
+                             join v in _context.Villanos on p.IdVillano equals v.Id
+                             join h in _context.Heroes on p.IdHeroe equals h.Id
+                             where h.Edad < 18 && p.Resultado == "Victoria"
+                             group v by v.Nombre into grupoVillano
+                             orderby grupoVillano.Count() descending
+                             select new
+                             {
+                                 Villano = grupoVillano.Key,
+                                 CantidadDerrotas = grupoVillano.Count()
+                             }).FirstOrDefault();
+
+            return Ok(resultado);
+        }
+
 
         private bool VillanoExists(int id)
         {

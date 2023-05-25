@@ -9,137 +9,137 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GuardiansOfTheGlobeApi
 build_property.RootNamespace = GuardiansOfTheGlobeApi
-build_property.ProjectDir = C:\Users\santi\Downloads\GuardiansOfTheGlobeApi\GuardiansOfTheGlobeApi\GuardiansOfTheGlobeApi\
+build_property.ProjectDir = C:\Users\santi\OneDrive\Documents\GitHub\GuardiansOfTheGlobe\GuardiansOfTheGlobeApi\GuardiansOfTheGlobeApi\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\santi\Downloads\GuardiansOfTheGlobeApi\GuardiansOfTheGlobeApi\GuardiansOfTheGlobeApi
+build_property.MSBuildProjectDirectory = C:\Users\santi\OneDrive\Documents\GitHub\GuardiansOfTheGlobe\GuardiansOfTheGlobeApi\GuardiansOfTheGlobeApi
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Create.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Delete.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Details.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Edit.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Index.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Agendas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Create.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Delete.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Details.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb2VzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Edit.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Index.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Heroes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Home/Index.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Home/Privacy.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Create.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cm9jaW5hZG9yZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Delete.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cm9jaW5hZG9yZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Details.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cm9jaW5hZG9yZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Edit.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cm9jaW5hZG9yZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Index.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Patrocinadores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0cm9jaW5hZG9yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Create.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVsZWFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Delete.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVsZWFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Details.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVsZWFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Edit.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVsZWFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Index.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Peleas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVsZWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Shared/Error.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Create.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFub3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Delete.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFub3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Details.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFub3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Edit.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFub3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Index.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Villanos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFub3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/_ViewImports.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/_ViewStart.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/santi/Downloads/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Shared/_Layout.cshtml]
+[C:/Users/santi/OneDrive/Documents/GitHub/GuardiansOfTheGlobe/GuardiansOfTheGlobeApi/GuardiansOfTheGlobeApi/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-66hkxk6x84

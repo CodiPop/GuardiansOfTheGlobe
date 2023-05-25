@@ -18,14 +18,33 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/heroe",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/heroe",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"heroe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Heroes por edad",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/HeroesPorEdad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"HeroesPorEdad"
 									]
 								}
 							},
@@ -37,12 +56,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/BuscarNombre/man",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/BuscarNombre/man",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"BuscarNombre",
 										"man"
@@ -57,12 +76,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/BuscarRelacion/Lois",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/BuscarRelacion/Lois",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"BuscarRelacion",
 										"Lois"
@@ -77,12 +96,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/BuscarHabilidad/Vuelo",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/BuscarHabilidad/Vuelo",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"BuscarHabilidad",
 										"Vuelo"
@@ -97,12 +116,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/heroes/MyG",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/heroes/MyG",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"heroes",
 										"MyG"
@@ -117,12 +136,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/heroes/Top3",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/heroes/Top3",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"heroes",
 										"Top3"
@@ -146,12 +165,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/CrearHeroe",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/CrearHeroe",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"CrearHeroe"
 									]
@@ -174,12 +193,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/ActualizarHeroe/18",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/ActualizarHeroe/18",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"ActualizarHeroe",
 										"18"
@@ -194,12 +213,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/BorrarHeroe/18",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/BorrarHeroe/18",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"BorrarHeroe",
 										"18"
@@ -219,14 +238,93 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/villano",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/villano",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"villano"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Villanos con mas derrotas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/VillanoMasDerrotas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"VillanoMasDerrotas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Villano por nombre",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/BuscarNombreVillano/loki",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"BuscarNombreVillano",
+										"loki"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Villano por Debilidad",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/BuscarDebilidadVillano/man",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"BuscarDebilidadVillano",
+										"man"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Villano por Origen",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/BuscarOrigenVillano/genosha",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"BuscarOrigenVillano",
+										"genosha"
 									]
 								}
 							},
@@ -238,16 +336,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/villanos/VmasPeleas/1",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/villanos/VmasPeleas/5",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"villanos",
 										"VmasPeleas",
-										"1"
+										"5"
 									]
 								}
 							},
@@ -268,12 +366,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/CrearVillano",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/CrearVillano",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"CrearVillano"
 									]
@@ -287,12 +385,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/BorrarVillano/7",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/BorrarVillano/7",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"BorrarVillano",
 										"7"
@@ -316,12 +414,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/ActualizarVillano/6",
+									"raw": "https://localhost:{{port}}/ActualizarVillano/6",
 									"protocol": "https",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"ActualizarVillano",
 										"6"
@@ -353,12 +451,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/agenda",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/agenda",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"agenda"
 									]
@@ -381,12 +479,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/CrearEvento",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/CrearEvento",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"CrearEvento"
 									]
@@ -409,12 +507,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/ActualizarEvento/7",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/ActualizarEvento/7",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"ActualizarEvento",
 										"7"
@@ -429,12 +527,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/EliminarEvento/7",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/EliminarEvento/7",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"EliminarEvento",
 										"7"
@@ -449,19 +547,39 @@
 					"name": "Patrocinador",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "Patrocinadores",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/Lospatrocinadores",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/Lospatrocinadores",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"Lospatrocinadores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patrocinadores Mayor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/PatrocinadorConMayorMonto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"PatrocinadorConMayorMonto",
+										"1"
 									]
 								}
 							},
@@ -474,7 +592,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n        \"idHeroe\": 1,\r\n        \"nombre\": \"Stark Industries\",\r\n        \"monto\": 100000,\r\n        \"origenDinero\": \"Industria tecnológica\",\r\n        \"idHeroeNavigation\": null\r\n}\r\n",
+									"raw": "{\r\n        \"idHeroe\": 1,\r\n        \"nombre\": \"Stark Industries\",\r\n        \"monto\": 1000000121250,\r\n        \"origenDinero\": \"Industria tecnológica\",\r\n        \"idHeroeNavigation\": null\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -482,12 +600,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/CrearPatrocinador",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/CrearPatrocinador",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"CrearPatrocinador"
 									]
@@ -510,12 +628,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/ActualizarPatrocinador/7",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/ActualizarPatrocinador/7",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"ActualizarPatrocinador",
 										"7"
@@ -530,12 +648,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/BorrarPatrocinador/7",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/BorrarPatrocinador/7",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"BorrarPatrocinador",
 										"7"
@@ -555,12 +673,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://localhost:7030/ObtenerPeleas",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/ObtenerPeleas",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"ObtenerPeleas"
 									]
@@ -575,7 +693,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"idheroe\": 4,\r\n  \"idvillano\": 4,\r\n  \"resultado\": \"xd\"\r\n}",
+									"raw": "{\r\n  \"idheroe\": 7,\r\n  \"idvillano\": 4,\r\n  \"resultado\": \"Victoria\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -583,12 +701,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/CrearPelea",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/CrearPelea",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"CrearPelea"
 									]
@@ -611,12 +729,12 @@
 									}
 								},
 								"url": {
-									"raw": "https://localhost:7030/ActualizarPelea/41",
-									"protocol": "https",
+									"raw": "http://localhost:{{port}}/ActualizarPelea/41",
+									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "7030",
+									"port": "{{port}}",
 									"path": [
 										"ActualizarPelea",
 										"41"
@@ -628,8 +746,20 @@
 						{
 							"name": "New Request",
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/EliminarPelea/41",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"EliminarPelea",
+										"41"
+									]
+								}
 							},
 							"response": []
 						}

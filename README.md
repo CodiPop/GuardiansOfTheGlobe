@@ -44,7 +44,7 @@ Enter the root folder in console and run the following commands:
 • docker-compose up
 
 ## Database
-If you want to populate the database quickly connect to the database engine with your desired app and use the script called Poblacion Final located in the root folder,
+If you want to populate the database quickly connect to the database engine with your desired app and use the script called Poblacion Final located in the root folder keep in mind that this script also creates some stored procedures that are required in order to fulfill all the requierements,
 the port in the localhost is 1433.
 
 User: sa

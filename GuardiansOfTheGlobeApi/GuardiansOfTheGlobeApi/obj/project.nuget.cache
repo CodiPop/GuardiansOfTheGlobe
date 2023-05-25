@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FiZZ1wRbyPF3OO7a0ZUXUb+NsImG1N9AqBh2TRIojjQ7S6xT46NLgQx6AD/hmJu3EcG1ObLAMhK5SbgoCOEeHg==",
+  "dgSpecHash": "aeH0Af2bSINGPRemnUWjxsA66AUIkTVVrzH/KGQ9Z/ySzoj73WAdKbkMKvECm+YFO7GNN52I5hEDphQVxylyjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\santi\\OneDrive\\Documents\\GitHub\\GuardiansOfTheGlobe\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi\\GuardiansOfTheGlobeApi.csproj",
   "expectedPackageFiles": [
@@ -57,6 +57,7 @@
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.net.stringtools\\17.3.2\\microsoft.net.stringtools.17.3.2.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.13\\microsoft.visualstudio.web.codegeneration.6.0.13.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.13\\microsoft.visualstudio.web.codegeneration.core.6.0.13.nupkg.sha512",

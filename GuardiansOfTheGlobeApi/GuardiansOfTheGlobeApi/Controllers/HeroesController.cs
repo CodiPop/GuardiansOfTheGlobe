@@ -74,6 +74,28 @@ namespace GuardiansOfTheGlobeApi.Controllers
             return busqueda;
         }
 
+
+        [HttpGet("HeroesPorEdad")]
+        public async Task<IActionResult> ObtenerHeroesPorEdad()
+        {
+            var heroesPorEdad = from h in _context.Heroes
+                                group h by new
+                                {
+                                    GrupoEdad = h.Edad >= 18 ? "Mayores de Edad" : "Adolescentes",
+                                    h.Id
+                                } into grupoEdad
+                                select new
+                                {
+                                    GrupoEdad = grupoEdad.Key.GrupoEdad,
+                                    Id = grupoEdad.Key.Id
+                                };
+
+
+
+            return Ok(heroesPorEdad);
+        }
+
+
         [HttpGet("heroes/MyG")]
         public async Task<IActionResult> GetMyG()
 

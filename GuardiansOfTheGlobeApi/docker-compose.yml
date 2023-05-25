@@ -1,0 +1,24 @@
+version: '3.4'
+services:
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - dbdata:/var/opt/mssql
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      - ConnectionStrings__AppConnection=Server=db;Database=mydatabase;User Id=sa;Password=Your_password123;
+    depends_on:
+      - db
+
+volumes:
+  dbdata:

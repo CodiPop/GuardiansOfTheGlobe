@@ -37,7 +37,7 @@
 
 ### Making the project run:
 
-Enter the root folder in console and run the following commands:
+Enter the root folder of the solution in console and run the following commands:
 
 • docker-compose build
 
@@ -53,4 +53,6 @@ Password: Your_password123
 
 ![Diagrama en blanco(1)](https://github.com/CodiPop/GuardiansOfTheGlobe/assets/47578270/8b5ac324-fd65-4614-82ea-2d7fe519f598)
 
+## API
 
+In order to use all of the calls to the api I suggest you use Postman since I already included the collection of all the calls for it.
